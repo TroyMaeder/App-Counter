@@ -1,0 +1,2 @@
+class SantaString(str):
+    pass
