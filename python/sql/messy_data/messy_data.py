@@ -22,6 +22,8 @@ class MessyData():
     full_name: TEXT
     credit_limit: FLOAT
 
+    You can find on this folder 2 files to populate the tables above. In order to solve this exercise you'll have to create the database
+    and populate them with the data from both CSV files.
 
     Keep in mind that the agencies had access only to a partial customer base. There is also the possibility of more than one agency 
     prospecting the same customer, so it's highly likely that there will be duplicates. Finally, they've prospected customers that 
