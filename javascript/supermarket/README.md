@@ -56,10 +56,7 @@ So the above basket will return the following totals:
 
 Also, we would like to start selling oranges, but those are priced by weight, not by unit.
 
-Please implement items priced by weight
-
-## Optional stages
-You can pick any of the following (or none), in no particular order
+Please implement items priced by weight.
 
 - Do not allow negative or zero quantities
 - Validate that products added to a basket are defined

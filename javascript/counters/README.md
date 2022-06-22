@@ -14,14 +14,12 @@ This simple app contains 3 counters and buttons to add and substract numbers eve
 
 ## Stage1:
 The `+` and `-` currently don't do anything. We'd like to see that everytime
-the `+` button is clicked, the associated number displayed should be incremented by `1` and when the `-` button is clicked, the associated number displayed should be decremented by `1`.
-## Stage2:
-There is new requirement for an extra Counter and ensure it's value is updated independently from the others.
+the `+` button is clicked, the associated number displayed should be incremented by `1` and when the `-` button is clicked, the associated number displayed should be decremented by `1`. 
 
-## Stage3:
+## Stage2:
 Users expressed that would be useful to see the total number that represents the sum of all the counters. Add a new element to the application to show this result.
 
-## Stage4:
+## Stage3:
 The application has no style whatsoever. We include an screenshot. Try to add some CSS so it looks as similar as possible.
 
 ![Counter example](counters.png)
