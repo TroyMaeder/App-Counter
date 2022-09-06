@@ -1,14 +1,14 @@
 # Intent HQ Java/Scala Code Challenges
 
-If you are a candidate and are doing one (or more) of this small katas at home you may want to read this.
+If you are a candidate and are doing this small kata at home you may want to read this.
 
-There are different katas in the package `com.intenthq.challenge`, each of them consists of a single file: `SKataName` (if scala) or `JKataName` (if java).
+The source for the challenge kata is in `com.intenthq.challenge`, for this post please complete the Scala version.
 
-Each challenge comes with a set of tests written in specs2, you won't probably need to add any test, but in case you need to, you'll find documentation about the test framework in here: http://specs2.org/
+The challenge comes with a set of tests written in specs2, you won't probably need to add any tests, but in case you need to, you'll find documentation about the test framework in here: http://specs2.org/
 
 ## How to start
 
-1. Read all the challenges and chose the one(s) you like best
+1. Read the challenge
 2. Download this folder or clone the repo **without creating a fork** and start working on it.
 3. Push your changes and send us the link to the github repo
 4. If you have any doubt while working on it just drop us an email and we'll help
@@ -20,7 +20,4 @@ $ sbt testOnly -- include scala
 
 To test your java code:
 $ sbt testOnly -- include java
-
-To test a specific challenge:
-$ sbt testOnly -- include nice/graph -- exclude java/scala
 ```
