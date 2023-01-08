@@ -27,7 +27,7 @@ const App = () => {
   };
 
   return (
-    <>
+    <main>
       <h1>Counters challenge</h1>
       {counters.map((counter, i) => (
         <Counter
@@ -37,10 +37,8 @@ const App = () => {
           decrement={() => handleClick(i, (n) => n - 1)}
         />
       ))}
-      <div>
-        Total count: {counters.reduce((acc, num) => acc + num.value, 0)}
-      </div>
-    </>
+      <p>Total count: {counters.reduce((acc, num) => acc + num.value, 0)}</p>
+    </main>
   );
 };
 
