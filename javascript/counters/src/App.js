@@ -6,12 +6,12 @@ const data = [
   { id: 3, value: 0 },
 ];
 
-const Counter = ({ count, handleClick }) => {
+const Counter = ({ count, increment, decrement }) => {
   return (
     <>
       <div>{count}</div>
-      <button onClick={handleClick}>+</button>
-      <button>-</button>
+      <button onClick={increment}>+</button>
+      <button onClick={decrement}>-</button>
     </>
   );
 };
@@ -19,9 +19,9 @@ const Counter = ({ count, handleClick }) => {
 const App = () => {
   const [counters, setCounters] = useState(data);
 
-  const handleClick = (index) => {
+  const handleClick = (index, cb) => {
     const countersCopy = [...counters];
-    countersCopy[index].value += 1;
+    countersCopy[index].value = cb(countersCopy[index].value);
 
     setCounters(countersCopy);
   };
@@ -32,7 +32,8 @@ const App = () => {
         <Counter
           key={counter.id}
           count={counter.value}
-          handleClick={() => handleClick(i)}
+          increment={() => handleClick(i, (n) => n + 1)}
+          decrement={() => handleClick(i, (n) => n - 1)}
         />
       ))}
     </>
