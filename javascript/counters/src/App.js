@@ -37,6 +37,9 @@ const App = () => {
           decrement={() => handleClick(i, (n) => n - 1)}
         />
       ))}
+      <div>
+        Total count: {counters.reduce((acc, num) => acc + num.value, 0)}
+      </div>
     </>
   );
 };
