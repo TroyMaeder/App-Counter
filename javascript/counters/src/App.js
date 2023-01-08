@@ -28,6 +28,7 @@ const App = () => {
 
   return (
     <>
+      <h1>Counters challenge</h1>
       {counters.map((counter, i) => (
         <Counter
           key={counter.id}
