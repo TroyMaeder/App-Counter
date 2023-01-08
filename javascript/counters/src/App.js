@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 
 const data = [
   { id: 1, value: 0 },
@@ -6,27 +6,37 @@ const data = [
   { id: 3, value: 0 },
 ];
 
-function Counter(props) {
-  const { value } = props;
+const Counter = ({ count, handleClick }) => {
   return (
-    <div>
-      <b>{value}</b>
-      <div>
-        <button>-</button>
-        <button>+</button>
-      </div>
-    </div>
+    <>
+      <div>{count}</div>
+      <button onClick={handleClick}>+</button>
+      <button>-</button>
+    </>
   );
-}
+};
 
-function App() {
+const App = () => {
+  const [counters, setCounters] = useState(data);
+
+  const handleClick = (index) => {
+    const countersCopy = [...counters];
+    countersCopy[index].value += 1;
+
+    setCounters(countersCopy);
+  };
+
   return (
-    <div>
-      {data.map((counter) => (
-        <Counter key={counter.id} value={counter.value} />
+    <>
+      {counters.map((counter, i) => (
+        <Counter
+          key={counter.id}
+          count={counter.value}
+          handleClick={() => handleClick(i)}
+        />
       ))}
-    </div>
+    </>
   );
-}
+};
 
 export default App;
