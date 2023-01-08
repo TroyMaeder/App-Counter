@@ -5,15 +5,15 @@ const data = [
   { id: 1, value: 0 },
   { id: 2, value: 0 },
   { id: 3, value: 0 },
-  { id: 3, value: 0 },
+  { id: 4, value: 0 },
 ];
 
 const Counter = ({ count, increment, decrement }) => {
   return (
     <div className="counter-wrapper">
-      <div class="counter">
+      <div className="counter">
         <div className="count">{count}</div>
-        <div class="buttons">
+        <div className="buttons">
           <button className="button green" onClick={increment}>
             +
           </button>
