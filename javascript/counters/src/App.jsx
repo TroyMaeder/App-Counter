@@ -1,4 +1,6 @@
 import React, { useState } from "react";
+
+import Counter from "./components/Counter/Counter";
 import "./index.css";
 
 const data = [
@@ -7,24 +9,6 @@ const data = [
   { id: 3, value: 0 },
   { id: 4, value: 0 },
 ];
-
-const Counter = ({ count, increment, decrement }) => {
-  return (
-    <div className="counter-wrapper">
-      <div className="counter">
-        <div className="count">{count}</div>
-        <div className="buttons">
-          <button className="button green" onClick={increment}>
-            +
-          </button>
-          <button className="button red" onClick={decrement}>
-            &minus;
-          </button>
-        </div>
-      </div>
-    </div>
-  );
-};
 
 const App = () => {
   const [counters, setCounters] = useState(data);

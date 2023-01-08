@@ -39,60 +39,6 @@ body {
     letter-spacing: .2rem;
 }
 
-.counters {
-    display: flex;
-    justify-content: space-between;
-}
-
-.counter {
-    display: flex;
-    align-items: center;
-    height: 3.125rem;
-    flex-direction: column;
-    justify-content: space-between;
-}
-
-.counter-wrapper {
-    display: flex;
-    flex: 1 0 20%;
-    align-items: center;
-    justify-content: center;
-    height: 6.5rem;
-    border: .0625rem var(--black-100) solid;
-}
-
-.counter:first-child {
-    border-left: none;
-}
-
-.counter:last-child {
-    border-right: none;
-}
-
-.buttons {
-    width: 2.8125rem;
-    display: flex;
-    justify-content: space-between;
-}
-
-.count {
-    font-size: var(--font-medium)
-}
-
-.button {
-    color: var(--white-100);
-    border: none;
-    border-radius: var(--border-radius-button);
-}
-
-.button.green {
-    background: var(--green-200);
-}
-
-.button.red {
-    background: var(--red-100);
-}
-
 .total {
     display: flex;
     flex: 1;
