@@ -1,18 +1,28 @@
 import React, { useState } from "react";
+import "./index.css";
 
 const data = [
   { id: 1, value: 0 },
   { id: 2, value: 0 },
   { id: 3, value: 0 },
+  { id: 3, value: 0 },
 ];
 
 const Counter = ({ count, increment, decrement }) => {
   return (
-    <>
-      <div>{count}</div>
-      <button onClick={increment}>+</button>
-      <button onClick={decrement}>-</button>
-    </>
+    <div className="counter-wrapper">
+      <div class="counter">
+        <div className="count">{count}</div>
+        <div class="buttons">
+          <button className="button green" onClick={increment}>
+            +
+          </button>
+          <button className="button red" onClick={decrement}>
+            &minus;
+          </button>
+        </div>
+      </div>
+    </div>
   );
 };
 
@@ -27,17 +37,21 @@ const App = () => {
   };
 
   return (
-    <main>
-      <h1>Counters challenge</h1>
-      {counters.map((counter, i) => (
-        <Counter
-          key={counter.id}
-          count={counter.value}
-          increment={() => handleClick(i, (n) => n + 1)}
-          decrement={() => handleClick(i, (n) => n - 1)}
-        />
-      ))}
-      <p>Total count: {counters.reduce((acc, num) => acc + num.value, 0)}</p>
+    <main className="main">
+      <h1 className="title">Counters challenge</h1>
+      <div className="counters">
+        {counters.map((counter, i) => (
+          <Counter
+            key={counter.id}
+            count={counter.value}
+            increment={() => handleClick(i, (n) => n + 1)}
+            decrement={() => handleClick(i, (n) => n - 1)}
+          />
+        ))}
+      </div>
+      <p className="total">
+        Total count: {counters.reduce((acc, num) => acc + num.value, 0)}
+      </p>
     </main>
   );
 };

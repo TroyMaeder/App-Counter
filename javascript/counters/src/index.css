@@ -1,0 +1,105 @@
+:root {
+    --header-height: 15.625rem;
+
+    --green-100: #239B8B;
+    --green-200: #43A646;
+    --black-100: #000;
+    --white-100: #fff;
+    --red-100: #F4004D;
+    --grey-100: #3D4750;
+
+    --border-size: 2rem;
+    --border-radius-div: 1rem;
+    --border-radius-button: 50%;
+
+    --font-medium: 1.25rem;
+}
+
+body {
+    font-family: sans-serif;
+}
+
+.main {
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    border: .125rem var(--black-100) solid;
+    height: var(--header-height);
+    border-radius: var(--border-radius-div)
+}
+
+.title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 40%;
+    margin: 0;
+    color: var(--white-100);
+    background: var(--green-100);
+    letter-spacing: .2rem;
+}
+
+.counters {
+    display: flex;
+    justify-content: space-between;
+}
+
+.counter {
+    display: flex;
+    align-items: center;
+    height: 3.125rem;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.counter-wrapper {
+    display: flex;
+    flex: 1 0 20%;
+    align-items: center;
+    justify-content: center;
+    height: 6.5rem;
+    border: .0625rem var(--black-100) solid;
+}
+
+.counter:first-child {
+    border-left: none;
+}
+
+.counter:last-child {
+    border-right: none;
+}
+
+.buttons {
+    width: 2.8125rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+.count {
+    font-size: var(--font-medium)
+}
+
+.button {
+    color: var(--white-100);
+    border: none;
+    border-radius: var(--border-radius-button);
+}
+
+.button.green {
+    background: var(--green-200);
+}
+
+.button.red {
+    background: var(--red-100);
+}
+
+.total {
+    display: flex;
+    flex: 1;
+    font-size: var(--font-medium);
+    justify-content: center;
+    align-items: center;
+    color: var(--white-100);
+    margin: 0;
+    background: var(--grey-100);
+}
